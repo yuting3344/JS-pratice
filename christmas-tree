@@ -1,0 +1,88 @@
+// 聖誕樹練習
+
+// 簡易版
+
+for( let i = 1 ; i <= 5 ; i++ ){
+    console.log("*".repeat(i));
+}
+
+// 標準版
+
+for( let i = 1 ; i <= 5 ; i++ ){
+    console.log(" ".repeat( 5 - i ) + "*".repeat(i * 2 - 1));
+}
+
+// 進階版--樹幹
+
+for( let i = 1 ; i <= 5 ; i++ ){
+    console.log(" ".repeat( 5 - i ) + "*".repeat(i * 2 - 1));
+}
+let abc = function(){
+    console.log(" ".repeat(4) + "*")
+}
+abc();
+abc();
+
+
+
+// 豪華版---吊飾
+
+for ( let i = 1; i <= 5; i++){
+    
+    if(i % 2 == 1){
+        console.log(" ".repeat(5-i) + "% * ".repeat((i-1)/2) + "% ");
+    }
+    else{
+        console.log(" ".repeat(5-i)+"% * ".repeat(i / 2));
+    }
+}
+let abc = function(){
+    console.log(" ".repeat(4) + "*");}
+abc();
+abc();
+
+
+let str = " "
+for( let i = 1 ; i <= 5 ; i ++){
+    console.log(" ".repeat(5-1));
+    }
+    str = " ";
+    for( let k = 1 ; k <= i - 1 ; k++ ){
+        str += "% "
+    }
+    for( let j =1 ; j <= i - 1 ; j++ ){
+        str += "* "
+    }
+console.log(str);
+
+
+// array陣列
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+}, 0);
+
+console.log(sum); // 輸出 15
+
+
+
+// // 陣列基本語法---->array.reduce(callback(accumulator, currentValue, currentIndex, array), initialValue)
+
+// wooow解法
+let arr = ["*", "%"];
+for(let i = 1; i <= 6; i++){
+    let str = '';
+    let count = 0;
+    for(let j = 0; j < 6 - i; j++) {
+        str += ' '
+    }
+    for(let k = 0; k < i - 1; k++) {
+        count++
+        if(count > arr.length - 1) {
+            count = 0;
+        }
+        str += arr[count] + " "
+    }
+    console.log(str)
+}
